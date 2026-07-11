@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MovieDetail from './MovieDetails'; // நீங்கள் உருவாக்கிய கோப்பு
+import MovieDetail from './MovieDetails'; 
 import Home from './Home';
 import Watchlist from './Watchlist';
 import { auth, googleProvider } from './firebase';
