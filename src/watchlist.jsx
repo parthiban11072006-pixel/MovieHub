@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function Watchlist() {
-    const [watchlist, setWatchlist] = useState([]);
+    const [Watchlist, setWatchlist] = useState([]);
 
     useEffect(() => {
         // LocalStorage-லிருந்து படங்களை எடுக்கும்
@@ -12,7 +12,7 @@ function Watchlist() {
 
     // படம் நீக்கும் வசதி (Remove feature)
     const removeMovie = (id) => {
-        let savedMovies = JSON.parse(localStorage.getItem("watchlist") || "[]");
+        let savedMovies = JSON.parse(localStorage.getItem("Watchlist") || "[]");
         const updatedList = savedMovies.filter((movie) => movie.id !== id);
         localStorage.setItem("watchlist", JSON.stringify(updatedList));
         setWatchlist(updatedList);
@@ -24,12 +24,12 @@ function Watchlist() {
             <Link to="/" style={{ color: 'lightblue', textDecoration: 'none' }}>← Back to Home</Link>
             
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', marginTop: '20px' }}>
-                {watchlist.map((movie, index) => (
+                {Watchlist.map((movie, index) => (
                     <div key={index} style={{ width: '150px' }}>
-                        <img 
-                            src={movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : ''} 
-                            alt={movie.title} 
-                            style={{ width: '100%', borderRadius: '10px' }} 
+                       <img 
+                         src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} 
+                         alt={movie.title} 
+                         style={{ width: '100%', borderRadius: '10px', height: 'auto' }} 
                         />
                         <p style={{ fontSize: '14px', textAlign: 'center' }}>{movie.title}</p>
                         
