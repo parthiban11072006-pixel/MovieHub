@@ -67,7 +67,7 @@ return (
         
         {/* டிரெய்லர் விவரங்கள் பக்கம் */}
         <Route path="/movie/:id" element={<MovieDetails />} />
-        <Route path="/watchlist" element={<Watchlist />} />
+        <Route path="/Watchlist" element={<Watchlist />} />
       </Routes>
     </Router>
   );
