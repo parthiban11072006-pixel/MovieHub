@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MovieDetail from './MovieDetails'; 
+import MovieDetails from './MovieDetails'; 
 import Home from './Home';
 import Watchlist from './Watchlist';
 import { auth, googleProvider } from './firebase';
@@ -66,7 +66,7 @@ return (
         )} />
         
         {/* டிரெய்லர் விவரங்கள் பக்கம் */}
-        <Route path="/movie/:id" element={<MovieDetail />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/watchlist" element={<Watchlist />} />
       </Routes>
     </Router>
