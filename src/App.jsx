@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import MovieDetails from './MovieDetails'; 
 import Home from './Home';
-import Watchlist from './Watchlist';
+import Watchlist from './WatchList';
 import { auth, googleProvider } from './firebase';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signInWithPopup, signOut, onAuthStateChanged } from 'firebase/auth';
 
